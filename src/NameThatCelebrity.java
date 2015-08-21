@@ -18,19 +18,14 @@ public class NameThatCelebrity {
 		int s3_length = s3.length();
 
 		// Set the first and last names.
-		String s1_first = s1.substring(2, 6);
-		String s1_last = s1.substring(6, s1_length - 3);
-
-		String s2_first = s2.substring(2, 5);
-		String s2_last = s2.substring(5, s2_length - 3);
-
-		String s3_first = s3.substring(2, 6);
-		String s3_last = s3.substring(6, s3_length - 3);
+		String s1_short = s1.substring(2, s1_length - 3);
+		String s2_short = s2.substring(2, s2_length - 3);
+		String s3_short = s3.substring(2, s3_length - 3);
 
 		// Generate the guesses.
-		String s1_prompt = s1 + future + s1_first + s1_last;
-		String s2_prompt = s2 + future + s2_first + s2_last;
-		String s3_prompt = s3 + future + s3_first + s3_last;
+		String s1_prompt = s1 + future + s1_short;
+		String s2_prompt = s2 + future + s2_short;
+		String s3_prompt = s3 + future + s3_short;
 
 		// Print the statements.
 		System.out.println(s1_prompt);
